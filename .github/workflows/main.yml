@@ -1,10 +1,8 @@
-name: CI
+name: Ubuntu
 on: [push]
 jobs:
-  build:
+  Ubuntu:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
-      timeout-minutes: 60
+    - name: Setup Debug Session
+      uses: csexton/debugger-action@master
